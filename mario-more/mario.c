@@ -22,10 +22,6 @@ int main(void)
             {
                 printf("#");
             }
-            for(int k=0; k<n-i; k++)
-            {
-                printf(" ");
-            }
             printf("\n");
         }
 }
