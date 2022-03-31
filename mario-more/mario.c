@@ -9,7 +9,7 @@ int main(void)
     } while(n<1 || n>8);
         for(int i=0; i<n; i++)
         {
-            for(int k=0; k<n-i; k++)
+            for(int k=1; k<n-i; k++)
             {
                 printf(" ");
             }
