@@ -60,7 +60,7 @@ int calculate_dimes(int cents)
         if (tmp >= 10) {
         calculate_dimes = tmp / 10 ;
             }
-    return calculate_quarters;
+    return calculate_dimes;
 }
 
 int calculate_nickels(int cents)
