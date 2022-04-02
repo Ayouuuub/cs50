@@ -48,7 +48,8 @@ int calculate_quarters(int cents)
 {
     // TODO
     if (get_cents >= 25) {
-        calculate_quarters = get_cents / 25;    }
+        calculate_quarters = get_cents / 25 ;
+            }
     return 0;
 }
 
