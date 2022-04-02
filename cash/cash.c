@@ -38,7 +38,9 @@ int main(void)
 int get_cents(void)
 {
     // TODO
-    
+        do {
+         get_cents = get_int("Height: ");
+    } while(n<1 || n>8);
     return 0;
 }
 
