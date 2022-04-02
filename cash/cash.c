@@ -47,6 +47,9 @@ int get_cents(void)
 int calculate_quarters(int cents)
 {
     // TODO
+    if (get_cents >= 25) {
+        calculate_quarters = 
+    }
     return 0;
 }
 
