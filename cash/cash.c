@@ -39,9 +39,9 @@ int get_cents(void)
 {
     // TODO
         do {
-         get_cents = get_int("Height: ");
-    } while(n<1 || n>8);
-    return 0;
+         get_cents = get_int("Number of cents: ");
+    } while(get_cents < 0);
+    return get_cents;
 }
 
 int calculate_quarters(int cents)
