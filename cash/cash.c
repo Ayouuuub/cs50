@@ -35,11 +35,11 @@ int main(void)
     printf("%i\n", coins);
 }
 
-int get_cents(void)
+int get_cents(int)
 {
     // TODO
         do {
-         get_cents = get_int("Number of cents: ", %i);
+         get_cents = get_int("Number of cents: ");
     } while(get_cents < 0);
     return get_cents;
 }
