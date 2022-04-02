@@ -49,6 +49,7 @@ int calculate_quarters(int cents)
     // TODO
     if (get_cents >= 25) {
         calculate_quarters = get_cents / 25 ;
+        int tmp = get_cents - calculate_quarters * 25 ;
             }
     return calculate_quarters;
 }
@@ -56,7 +57,10 @@ int calculate_quarters(int cents)
 int calculate_dimes(int cents)
 {
     // TODO
-    return 0;
+        if (tmp >= 10) {
+        calculate_dimes = tmp / 10 ;
+            }
+    return calculate_quarters;
 }
 
 int calculate_nickels(int cents)
