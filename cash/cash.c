@@ -60,17 +60,25 @@ int calculate_dimes(int cents)
         if (tmp >= 10) {
         calculate_dimes = tmp / 10 ;
             }
+            tmp = tmp - calculate_dimes * 10 ;
     return calculate_dimes;
 }
 
 int calculate_nickels(int cents)
 {
     // TODO
-    return 0;
+            if (tmp >= 5) {
+        calculate_nickels = tmp / 5 ;
+            }
+            tmp = tmp - calculate_nickels * 5 ;
+    return calculate_nickels;
 }
 
 int calculate_pennies(int cents)
 {
     // TODO
-    return 0;
+            if (tmp >= 1) {
+        calculate_pennies = tmp ;
+            }
+    return calculate_pennies;
 }
