@@ -46,13 +46,12 @@ int get_cents(void)
     return number_entred;
 }
 
-int calculate_quarters(int cents)
-{
-    // TODO
-    if (get_cents >= 25) {
-        calculate_quarters = get_cents / 25 ;
+int calculate_quarters(int cents){
+    int calculate_quarters = 0;
+    if (cents >= 25) {
+        calculate_quarters = cents / 25 ;
         int tmp = get_cents - calculate_quarters * 25 ;
-            }
+    }
     return calculate_quarters;
 }
 
