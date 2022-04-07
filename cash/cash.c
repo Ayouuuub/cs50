@@ -38,46 +38,56 @@ int main(void)
 int get_cents(void)
 {
     // TODO
-        do {
-         int  = get_int("Number of cents: ");
-    } while(get_cents < 0);
+    int number_entered = 0;
+    do {
+         number_entered  = get_int("Number of cents: ");
+    } while(number_entered < 0);
+
+    return number_entered;
 }
 
-int calculate_quarters(int cents)
-{
-    // TODO
-    if (get_cents >= 25) {
-        calculate_quarters = get_cents / 25 ;
-        int tmp = get_cents - calculate_quarters * 25 ;
-            }
-    return calculate_quarters;
+int calculate_quarters(int cents){
+    int cc = 0;
+    if (cents >= 25) {
+        cc = cents / 25 ;
+    }
+    return cc;
 }
 
 int calculate_dimes(int cents)
 {
     // TODO
+        int cc = calculate_quarters(cents);
+        int tmp = cents - cc * 25 ;
+        int calculate_dimes = 0;
         if (tmp >= 10) {
         calculate_dimes = tmp / 10 ;
             }
-            tmp = tmp - calculate_dimes * 10 ;
     return calculate_dimes;
 }
 
 int calculate_nickels(int cents)
 {
-    // TODO
+    int cc = calculate_quarters(cents);
+    int cd = calculate_dimes(cents);
+        int tmp = cents - cc * 25 - cd * 10;
+        int calculate_nickels = 0;
             if (tmp >= 5) {
         calculate_nickels = tmp / 5 ;
             }
-            tmp = tmp - calculate_nickels * 5 ;
     return calculate_nickels;
 }
 
-int calculate_pennies(int cents)
-{
-    // TODO
-            if (tmp >= 1) {
-        calculate_pennies = tmp ;
-            }
-    return calculate_pennies;
-}
+    int calculate_pennies(int cents)
+    {
+        // TODO
+        int cc = calculate_quarters(cents);
+    int cd = calculate_dimes(cents);
+    int cn = calculate_nickels(cents);
+        int tmp = cents - cc * 25 - cd * 10 - cn * 5;
+        int calculate_pennies = 0;
+                if (tmp >= 1) {
+            calculate_pennies = tmp ;
+                }
+        return calculate_pennies;
+    }
