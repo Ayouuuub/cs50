@@ -16,9 +16,9 @@ int main(void)
     int quarters = calculate_quarters(cents);
     cents = cents - quarters * 25;
 
-    // // Calculate the number of dimes to give the customer
-    // int dimes = calculate_dimes(cents);
-    // cents = cents - dimes * 10;
+    // Calculate the number of dimes to give the customer
+    int dimes = calculate_dimes(cents);
+    cents = cents - dimes * 10;
 
     // // Calculate the number of nickels to give the customer
     // int nickels = calculate_nickels(cents);
@@ -47,23 +47,25 @@ int get_cents(void)
 }
 
 int calculate_quarters(int cents){
-    int calculate_quarters = 0;
+    int cc = 0;
     if (cents >= 25) {
-        calculate_quarters = cents / 25 ;
-        int tmp = get_cents - calculate_quarters * 25 ;
+        cc = cents / 25 ;
     }
-    return calculate_quarters;
+    return cc;
 }
 
-// int calculate_dimes(int cents)
-// {
-//     // TODO
-//         if (tmp >= 10) {
-//         calculate_dimes = tmp / 10 ;
-//             }
-//             tmp = tmp - calculate_dimes * 10 ;
-//     return calculate_dimes;
-// }
+int calculate_dimes(int cents)
+{
+    // TODO
+        int cc = calculate_quarters(cents);
+        int tmp = cents - cc * 25 ;
+        int calculate_dimes = 0;
+        if (tmp >= 10) {
+        calculate_dimes = tmp / 10 ;
+            }
+            tmp = tmp - calculate_dimes * 10 ;
+    return calculate_dimes;
+}
 
 // int calculate_nickels(int cents)
 // {
