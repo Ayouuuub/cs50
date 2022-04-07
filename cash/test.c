@@ -67,15 +67,18 @@ int calculate_dimes(int cents)
     return calculate_dimes;
 }
 
-// int calculate_nickels(int cents)
-// {
-//     // TODO
-//             if (tmp >= 5) {
-//         calculate_nickels = tmp / 5 ;
-//             }
-//             tmp = tmp - calculate_nickels * 5 ;
-//     return calculate_nickels;
-// }
+int calculate_nickels(int cents)
+{
+    // TODO
+    int cc = calculate_quarters(cents);
+        int tmp = cents - cc * 25 ;
+        int calculate_dimes = 0;
+            if (tmp >= 5) {
+        calculate_nickels = tmp / 5 ;
+            }
+            tmp = tmp - calculate_nickels * 5 ;
+    return calculate_nickels;
+}
 
 // int calculate_pennies(int cents)
 // {
