@@ -83,7 +83,7 @@ int calculate_nickels(int cents)
         // TODO
         int cc = calculate_quarters(cents);
     int cd = calculate_dimes(cents);
-    int cn = calculate_nickels();
+    int cn = calculate_nickels(cents);
         int tmp = cents - cc * 25 - cd * 10 - cn * 5;
         int calculate_pennies = 0;
                 if (tmp >= 1) {
