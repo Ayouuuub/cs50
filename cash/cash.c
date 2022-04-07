@@ -68,12 +68,12 @@ int calculate_dimes(int cents)
 
 int calculate_nickels(int cents)
 {
-    int cc = calculate_quarters(cents);
-    int cd = calculate_dimes(cents);
-        int tmp = cents - cc * 25 - cd * 10;
+    // int cc = calculate_quarters(cents);
+    // int cd = calculate_dimes(cents);
+    //     int tmp = cents - cc * 25 - cd * 10;
         int calculate_nickels = 0;
-            if (tmp >= 5) {
-        calculate_nickels = tmp / 5 ;
+            if (cents >= 5) {
+        calculate_nickels = cents / 5 ;
             }
     return calculate_nickels;
 }
@@ -81,13 +81,13 @@ int calculate_nickels(int cents)
     int calculate_pennies(int cents)
     {
         // TODO
-        int cc = calculate_quarters(cents);
-    int cd = calculate_dimes(cents);
-    int cn = calculate_nickels(cents);
-        int tmp = cents - cc * 25 - cd * 10 - cn * 5;
+    //     int cc = calculate_quarters(cents);
+    // int cd = calculate_dimes(cents);
+    // int cn = calculate_nickels(cents);
+    //     int tmp = cents - cc * 25 - cd * 10 - cn * 5;
         int calculate_pennies = 0;
-                if (tmp >= 1) {
-            calculate_pennies = tmp ;
+                if (cents >= 1) {
+            calculate_pennies = cents ;
                 }
         return calculate_pennies;
     }
