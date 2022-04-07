@@ -57,11 +57,11 @@ int calculate_quarters(int cents){
 int calculate_dimes(int cents)
 {
     // TODO
-        int cc = calculate_quarters(cents);
-        int tmp = cents - cc * 25 ;
+        // int cc = calculate_quarters(cents);
+        // int tmp = cents - cc * 25 ;
         int calculate_dimes = 0;
-        if (tmp >= 10) {
-        calculate_dimes = tmp / 10 ;
+        if (cents >= 10) {
+        calculate_dimes = cents / 10 ;
             }
     return calculate_dimes;
 }
