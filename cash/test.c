@@ -71,8 +71,9 @@ int calculate_nickels(int cents)
 {
     // TODO
     int cc = calculate_quarters(cents);
-        int tmp = cents - cc * 25 ;
-        int calculate_dimes = 0;
+    int cd = calculate_dimes(cents)
+        int tmp = cents - cc * 25 - cd * 10;
+        int calculate_nickels = 0;
             if (tmp >= 5) {
         calculate_nickels = tmp / 5 ;
             }
