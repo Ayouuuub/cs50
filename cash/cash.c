@@ -39,7 +39,7 @@ int get_cents(void)
 {
     // TODO
         do {
-         get_cents = get_int("Number of cents: ");
+         int  = get_int("Number of cents: ");
     } while(get_cents < 0);
 }
 
